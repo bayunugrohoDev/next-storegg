@@ -1,6 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  typescript: {
+    // !! WARN !!
+    // Dangerously allow production builds to successfully complete even if
+    // your project has type errors.
+    // !! WARN !!
+    ignoreBuildErrors: true,
+  },
   reactStrictMode: true,
-}
+  images: {
+    domains: ['bayudwi-store-gg-backend.herokuapp.com'],
+  },
 
-module.exports = nextConfig
+};
+
+module.exports = nextConfig;
